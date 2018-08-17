@@ -48,13 +48,14 @@
 % \setmainfont{Lato}
 
 % Change the colours if you want to
-\definecolor{Mulberry}{HTML}{72243D}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{Sepia}
-\colorlet{accent}{Mulberry}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+\definecolor{Emphasis}{HTML}{4a4d9e}
+\definecolor{Accent}{HTML}{0f0f45}
+\definecolor{Body}{HTML}{666666}
+\definecolor{Heading}{HTML}{181741}
+\colorlet{heading}{Heading}
+\colorlet{accent}{Accent}
+\colorlet{emphasis}{Emphasis}
+\colorlet{body}{Body}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -64,23 +65,26 @@
 \addbibresource{sample.bib}
 
 \usepackage[colorlinks]{hyperref}
+\hypersetup{
+	colorlinks=true,    
+	urlcolor=blue,
+}
 
 \begin{document}
 
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
-\photo{2.8cm}{Globe_High}
+\name{Roberto Arias Ruiz}
+\tagline{Software Engineer - Product Owner}
+\photo{2.8cm}{RoberAzul_Round}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{your@email.com}
-  \phone{000-00-0000}
-  \mailaddress{Address, Street, 00000 County}
-  \location{Location, COUNTRY}
-  \homepage{www.homepage.com}
-  \twitter{@twitterhandle}
-  \linkedin{linkedin.com/in/yourid}
-  \github{github.com/yourid}
+  \email{roberlamerma@gmail.com}
+  \phone{+34 678714822}
+  \mailaddress{Calle Mercedes 8, 08024}
+  \location{Barcelona, Spain}
+  \twitter{@roberlamerma}
+  \linkedin{linkedin.com/in/roberlamerma}
+  \github{github.com/roberlamerma}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
 %   \orcid{orcid.org/0000-0000-0000-0000}
 }
@@ -96,32 +100,71 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+%\cvevent{Product Owner}{Roche Diagnostics}{May 2011 -- Ongoing}{Barcelona, Spain}
+%\cvevent{Roche Diagnostics \href{https://www.roche.com/about/business/diagnostics.htm}{\small <http://www.roche.com>}\par}{Product Owner}{May 2015 -- Ongoing}{Barcelona, Spain}
+\cvevent{Roche Diagnostics}{Product Owner}{May 2015 -- Ongoing}{Barcelona, Spain}
 \begin{itemize}
-\item Job description 1 
-\item Job description 2
+	\item Product owner for a Point of Care device that automates virus and disease detection using molecular (PCR) analysis. Stakeholder management.
+	\item Work package creation and later acceptance for 3 teams on a distributed location setup (Spain and Switzerland)
+	\item Requirements and usability (UX) engineering: analysis of requirements (HP-ALM) \& creation of User Interface Sketches (Balsamiq Mockups).
+	\item Creation of Roadmap plans and product vision, using proven Project Management artifacts. Resource \& capacity management.
+\end{itemize}
+
+\cvevent{}{Scrum \& Build Master / Senior Software Developer}{May 2011 -- May 2015}{}
+\begin{itemize}
+	\item Coordination of a local 9 people Scrum team with several teams, spread along Spain, India and Switzerland, for a major Laboratory Diagnostics project.
+	\item Creation of project management reports and KPI analysis, using Microsoft Reporting/Integration Services, TFS (SQL and OLAP cubes), Tableau and Excel.
 \end{itemize}
 
 \divider
 
-\cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
+\cvevent{Wolters Kluwer}{Software Architect}{Apr 2010 -- May 2011}{Barcelona, Spain}
 \begin{itemize}
-\item Job description 1
-
-\item Job description 2
+	\item Analysis and Design for a core development software framework in a joint project among all the European headquarters of the group.
+	\item Technologies: .Net, C\#, TFS, Oracle/SQL Server, WCF, WPF, EF.
 \end{itemize}
 
-\cvsection{Projects}
 
-\cvevent{Project 1}{Funding agency/institution}{Project duration}{}
+\divider
+
+\cvevent{Amper}{Senior Software Developer}{Mar 2007 -- Feb 2010}{Barcelona, Spain}
 \begin{itemize}
-\item Details
+	\item Design of .NET services and applications: client-server solutions, MVC, distributed applica-
+	tions, high availability. Technologies: WPF, WCF, Compact Framework, Sockets, etc.
+	\item Research and Development of embedded systems and mobile applications.
 \end{itemize}
 
 \divider
 
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+\cvevent{Grupo 3C}{Software Developer}{Dec 2005 -- Jan 2007}{Barcelona, Spain}
+\begin{itemize}
+	\item Web: PHP, Perl, MySQL, HTML, CSS, JS. Web traffic management (Apache)
+\end{itemize}
+
+\divider
+
+\cvevent{iChameleon Group INC}{Freelance Software Developer}{Aug 2004 -- Oct 2005}{(Several locations)}
+\begin{itemize}
+	\item Freelance project for the development (Frontend and Backend) of an online music shop. Perl, FastCGI, PostgreSQL.
+	\item Development of Mac applications (Objective-C, Cocoa Framework).
+\end{itemize}
+
+%\divider
+\cvsection[page2sidebar]{Experience}
+
+\cvevent{Gaiax Co, LTD}{Software Developer Internship}{Aug 2003 -- Jul 2004}{Tokyo, Japan}
+\begin{itemize}
+	\item Web game development using Perl (mod perl and FastCGI)
+	\item Research project on high processing capacity technologies. Benchmark and Profiling of Web applications.
+\end{itemize}
+
+\divider
+
+\cvevent{Computation Laboratory, USB}{Linux System Administrator}{Oct 1999 -- Oct 2002}{Caracas, Venezuela}
+\begin{itemize}
+	\item Design and maintenance of several nodes of the university LAN. Maintenance of all software (Linux, Solaris)
+	\item Responsible for the admission of new members (initial exams, training, etc)
+\end{itemize}
 
 \medskip
 
@@ -138,20 +181,20 @@ A short abstract would also work.
   5/6em/accent!20/Spending time with family
 }
 
-\clearpage
-\cvsection[page2sidebar]{Publications}
+%\clearpage
+%\cvsection[page2sidebar]{Publications}
 
-\nocite{*}
+%\nocite{*}
 
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
 
-\divider
+%\divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
 
-\divider
+%\divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
 
 %% If the NEXT page doesn't start with a \cvsection but you'd
 %% still like to add a sidebar, then use this command on THIS
