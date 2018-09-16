@@ -25,7 +25,10 @@
 \LoadClass{extarticle}
 
 \RequirePackage[margin=2cm]{geometry}
+\usepackage{fontspec} % Was able to fix it with this line
+\defaultfontfeatures{Extension = .otf} % ...and this line
 \RequirePackage{fontawesome}
+%%\newfontfamily{\FA}{[FontAwesome.otf]}
 
 %% v1.1: Optionally load academicons
 \if@academicons
