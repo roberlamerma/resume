@@ -33,6 +33,7 @@
 %% Academicons.ttf in your operating system's font 
 %% folder.
 
+\usepackage{svg}
 
 % Change the page layout if you need to
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
@@ -53,7 +54,7 @@
 % Change the colours if you want to
 \definecolor{Emphasis}{HTML}{4a4d9e}
 \definecolor{Accent}{HTML}{0f0f45}
-\definecolor{Body}{HTML}{666666}
+\definecolor{Body}{HTML}{555555}
 \definecolor{Heading}{HTML}{181741}
 \colorlet{heading}{Heading}
 \colorlet{accent}{Accent}
@@ -64,6 +65,7 @@
 % for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
+
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
 
@@ -76,20 +78,22 @@
 \begin{document}
 
 \name{Roberto Arias Ruiz}
-\tagline{Software Engineer - Product Owner}
-\photo{2.8cm}{RoberAzul_Round}
+\tagline{Software Product Manager}
+\photo{3.0cm}{Rober_Gray_Round}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
   \mailaddress{roberlamerma@gmail.com}
-  \phone{+34 678714822}
+  \phone{+41 774967886 / +34 678714822}
 %  \mailaddress{Sonnhaldenstrasse 25}
   \location{Sonnhaldenstrasse 25, 6331 Hünenberg, Switzerland}
-  \twitter{@roberlamerma}
   \linkedin{linkedin.com/in/roberlamerma}
-  \github{github.com/roberlamerma}
+  % \github{github.com/roberlamerma}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
 %   \orcid{orcid.org/0000-0000-0000-0000}
+
+	
+
 }
 
 %% Make the header extend all the way to the right, if you want. 
@@ -102,13 +106,11 @@
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Profile}
-
 \begin{itemize} 
-	\item Broad experience in all Software Development Life-cycle milestones.
-	\item Expert on Scrum \& Agile methodologies.
-	\item Ability to cope with critical and high pressure situations.              
-	\item Excellent communication and presentation skills.
-	\item Data \& fact driven. Interested in Data Science and Machine Learning.
+	\item Over 20 years of comprehensive experience in all stages of the Software Development Life Cycle.
+	\item Expert in Agile methodologies (SAFe, Scrum) with a proven track record of successful implementations.	       
+	\item Exceptional communication and presentation skills, with the ability to engage both technical and non-technical audiences.
+	\item Skilled in managing high-pressure situations with data and fact-driven decision-making.
 \end{itemize}
 
 \medskip
@@ -117,26 +119,32 @@
 
 %\cvevent{Product Owner}{Roche Diagnostics}{May 2011 -- Ongoing}{Barcelona, Spain}
 %\cvevent{Roche Diagnostics \href{https://www.roche.com/about/business/diagnostics.htm}{\small <http://www.roche.com>}\par}{Product Owner}{May 2015 -- Ongoing}{Barcelona, Spain}
-\cvevent{Roche Diagnostics}{Product Owner}{May 2015 -- Ongoing}{Rotkreuz, Switzerland}
+\cvevent{Roche Diagnostics}{Product Manager}{Nov 2022 -- Now}{Rotkreuz, Switzerland}
 \begin{itemize}
-	\item Product owner for a Point of Care device that automates virus and disease detection using molecular (PCR) analysis. Stakeholder management.
-	\item Work Packages/User Stories creation and later acceptance for 3 teams on a distributed location setup (Spain and Switzerland)
-	\item Requirements and usability (UX) engineering: requirements management \& creation of User Interface Sketches.
-	\item Creation of Roadmap plans and product vision, using proven Project Management artifacts. Resource \& budget management.
+	\item SW Product Manager for \textbf{Roche's first DNA-Sequencing instrument}.
+	\item Developed project plans, including the product roadmap, work breakdown structure, and overall software vision. 
+	\item Successfully recruited two (out of seven) SW development teams.
+\end{itemize}
+
+
+\cvevent{}{Product Owner}{May 2015 -- Nov 2022}{Rotkreuz, Switzerland}
+\begin{itemize}
+	\item Led product development for the {\href{https://www.cobasliat.com/}{\textsuperscript{\textregistered}Cobas \textsuperscript{\textregistered}Liat}} point-of-care device, which was \textbf{pivotal during the COVID-19 pandemic}.
+	\item Defined and prioritized user stories for the SW development teams and coordinated acceptance testing with QA teams in a distributed setup (Spain and Switzerland).
+	\item Created detailed requirements and user interface sketches to guide development.
 \end{itemize}
 
 \cvevent{}{Scrum \& Build Master / Senior Software Developer}{May 2011 -- May 2015}{Barcelona, Spain}
 \begin{itemize}
-	\item Coordination of a local 9 people Scrum team with several teams, spread along Spain, India and Switzerland, for a high-throughput diagnostics analyzer.
-	\item Project management reports and KPI analysis, using Microsoft Reporting/Integration Services, TFS (SQL and OLAP cubes), Tableau and Excel.
+	\item Led a local Scrum team and coordinated with international teams in Spain, India, and Switzerland to deliver a high-throughput PCR analyzer.
+	\item Developed a \textbf{comprehensive reporting and KPI analysis suite} using Microsoft Reporting/Integration Services, TFS, SQL, OLAP cubes, and PowerBI.
 \end{itemize}
 
 \divider
 
 \cvevent{Wolters Kluwer}{Software Architect}{Apr 2010 -- May 2011}{Barcelona, Spain}
 \begin{itemize}
-	\item Analysis and Design for a core development software framework in a joint project among all the European branches of the company.
-	\item Technologies: .Net, C\#, TFS, SQL Server, WCF, WPF, EntityFramework.
+	\item Designed and developed a \textbf{C{\#}-based SW framework} for internal tax and accounting applications, enhancing operational efficiency.
 \end{itemize}
 
 
@@ -144,79 +152,88 @@
 
 \cvevent{Amper}{Senior Software Developer}{Mar 2007 -- Feb 2010}{Barcelona, Spain}
 \begin{itemize}
-	\item Design of .NET services and applications: client-server solutions, MVC, distributed applications, high availability. 
-	\item Research and Development of embedded systems and mobile applications.
+	\item Conducted \textbf{research and development} on embedded systems and comm protocols, driving innovation in the company’s product offerings.
+	\item Designed and developed .NET services and applications.
+\end{itemize}
+
+% \divider
+
+\cvsection[page2sidebar]{Experience}
+
+\cvevent{Grupo 3C}{Software Developer}{Dec 2005 -- Jan 2007}{Barcelona, Spain}
+\begin{itemize}
+	\item Developed \textbf{web applications} using PHP, Perl, MySQL, HTML, CSS, and JavaScript, improving client service delivery.
 \end{itemize}
 
 \divider
 
-\cvevent{Grupo 3C}{Software Developer}{Dec 2005 -- Jan 2007}{Barcelona, Spain}
+\cvevent{iChameleon Group INC}{Full-stack Software Developer}{Aug 2004 -- Oct 2005}{(Freelancer - several locations)}
 \begin{itemize}
-	\item Web: PHP, Perl, MySQL, HTML, CSS, JS. Web traffic management (Apache)
-\end{itemize}
-
-\cvsection[page2sidebar]{Experience}
-
-%\divider
-
-\cvevent{iChameleon Group INC}{Freelance Software Developer}{Aug 2004 -- Oct 2005}{(Several locations)}
-\begin{itemize}
-	\item Freelance project for the development (Frontend and Backend) of an online music shop. Perl, FastCGI, PostgreSQL.
-	\item Development of Mac applications (Objective-C, Cocoa Framework).
+	\item Designed and implemented SW for an \textbf{online music shop} as a full-stack developer, utilizing Perl, FastCGI, PostgreSQL, and Objective-C.
 \end{itemize}
 
 \divider
 
 \cvevent{Gaiax Co, LTD}{Software Developer Internship}{Aug 2003 -- Jul 2004}{Tokyo, Japan}
 \begin{itemize}
-	\item Web game development using Perl (mod perl and FastCGI)
-	\item Research project on high processing capacity technologies. Benchmark and Profiling of Web applications.
+	\item Developed a Web game using Perl (mod perl and FastCGI). This was also \textbf{my university's thesis research project} on high loading \& demand technologies.
 \end{itemize}
 
 \divider
 
-\cvevent{Computing Laboratory, Sim\'{o}n Bol\'{i}var University}{Linux System Administrator}{Oct 1999 -- Oct 2002}{Caracas, Venezuela}
+\cvevent{Computing Laboratory, Sim\'{o}n Bol\'{i}var University}{IT \& Systems Administrator}{Oct 1999 -- Oct 2002}{Caracas, Venezuela}
 \begin{itemize}
-	\item Design and maintenance of several nodes of the university LAN. Maintenance of all software (Linux, Solaris and Windows servers)
-	\item Responsible for the admission of new members (exams, training, mentoring)
+	\item Managed and maintained parts of the \textbf{university’s LAN and lab servers} across Linux, Solaris, and Windows platforms, ensuring operational continuity and reliability.
+	\item Coordinated the admission of new members (exams, training, mentoring)
 \end{itemize}
 
+\medskip
+\medskip
+\medskip
 \medskip
 
 % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
 % \wheelchart{outer radius}{inner radius}{
 % comma-separated list of value/text width/color/detail}
-\cvsection{Project management skills}
-
+\cvsection{Product management skills}
 \wheelchart{1.5cm}{0.5cm}{%
-	2/8em/Emphasis!90/Stakeholder management, 
-	3/8em/Emphasis!45/KPI analysis,
+	3/8em/Emphasis!90/Stakeholder management, 
+	2/8em/Emphasis!45/KPI analysis,
 	3/8em/Emphasis/Communication,
-	2/4em/Emphasis!75/Usability \& UX,
-	3/5em/Emphasis!30/\mbox{Requirements engineering},
-	2/10em/Emphasis!15/People leader,
+	3/4em/Emphasis!75/Usability \& UX,
+	2/5em/Emphasis!30/\mbox{Requirements engineering},
+%	2/10em/Emphasis!15/People leader,
 	3/8em/Emphasis!60/Story mapping \& Roadmaps
 }
 
-\cvsection{Programming skills}
-
+\cvsection{Agile competencies}
 \wheelchart{1.5cm}{0.5cm}{%
-	7/2em/Emphasis!80/C\#, 
-	5/2em/Emphasis!50/Perl,
-	3/2em/Emphasis!40/C++,
-	3/2em/Emphasis/Bash,
-	2/2em/Emphasis!60/Phyton,
-	4/2em/Emphasis!20/{HTML/CSS/JS}
+	3/8em/Emphasis!90/Lean-Agile Leadership, 
+	2/8em/Emphasis!45/Expertise forming and managing Agile teams,
+	3/8em/Emphasis/DevOps and Release on Demand,
+	3/4em/Emphasis!75/\mbox{Business Solutions},
+	2/5em/Emphasis!30/\mbox{Lean Systems Engineering},
+	2/10em/Emphasis!15/People leader
 }
 
-\cvsection{OS skills}
+%\cvsection{Programming skills}
+% \wheelchart{1.5cm}{0.5cm}{%
+% 	7/2em/Emphasis!80/C\#, 
+% 	5/2em/Emphasis!50/Perl,
+% 	3/2em/Emphasis!40/C++,
+% 	3/2em/Emphasis/Bash,
+% 	2/2em/Emphasis!60/Phyton,
+% 	4/2em/Emphasis!20/{HTML/CSS/JS}
+% }
 
-\wheelchart{1.5cm}{0.5cm}{%
-	10/2em/Emphasis!30/Linux, 
-	3/2em/Emphasis!20/Mac OS,
-	8/2em/Emphasis!60/Windows,
-	5/2em/Emphasis/Embedded Linux
-}
+% \cvsection{OS skills}
+
+% \wheelchart{1.5cm}{0.5cm}{%
+% 	10/2em/Emphasis!30/Linux, 
+% 	3/2em/Emphasis!20/Mac OS,
+% 	8/2em/Emphasis!60/Windows,
+% 	5/2em/Emphasis/Embedded Linux
+% }
 
 %\colorlet{heading}{Heading}
 %\colorlet{accent}{Accent}
