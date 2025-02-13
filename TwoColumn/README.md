@@ -1,8 +1,23 @@
 # My Resume
 
+I initially cloned this from some repo I found on the internet. The old README contents are on the section "# Old README" below
+
+## Compile in Ubuntu 24.04
+
+1. Install these packages: **texstudio, texlive-fonts-extra, texlive-bibtex-extra, biber** 
+    - `sudo apt install texstudio texlive-fonts-extra texlive-bibtex-extra biber`
+    - Yes, these packages will require quite some space...
+2. Open the file *main.tex* from this repo from the just installed *texstudio*
+3. In **Options -> Configure TeXStudio... -> Build**:
+    - **Default Compiler**: Use *PdfLaTeX*
+    - **Commands**: Add the option "-shell-escape" to **PdfLaTeX**. My complete options look like this: `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode %.tex` 
+4. Compile it! (F6)
+
+# Old Readme
+
 It is based on AltaCV, from liantze@gmail.com
 
-# AltaCV
+## AltaCV
 Inspiration: [résumé of Marissa Mayer that Business Insider put together](http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/) using [enhancv.com](https://enhancv.com).
 
 ## Samples
