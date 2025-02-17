@@ -12,11 +12,11 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
-%% Defining languages
+%% Defining languages. Got this here: https://ptmartins.info/2021/05/15/cv.html
 \newif\ifen
 \newif\ifpt
-\entrue % English enabled
-%\pttrue % Portuguese disabled
+%\entrue % English enabled (either this line or the one below should be enabled, not both!)
+\pttrue % Portuguese enabled
 
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
@@ -42,8 +42,13 @@
 
 % For Languages
 \usepackage[english,brazilian]{babel}
-
 \usepackage{csquotes} % recommended when using babel
+
+%language markup commands
+\newcommand{\langen}[1]{%
+	\ifen\selectlanguage{english}#1\fi}
+\newcommand{\langpt}[1]{%
+	\ifpt\selectlanguage{portuges}#1\fi}
 
 %% For SVG inline images
 \usepackage{svg}
@@ -127,88 +132,132 @@
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[page1sidebar]{Profile}
+%\cvsection[page1sidebar]{Profile}
+\cvsection[page1sidebar]{\langen{Profile}\langpt{Perfil}}
+
 \begin{itemize} 
-	\item Over 20 years of comprehensive experience in all stages of the Software Development Life Cycle: from conception to delivery.
-	\item Ability to bridge the gap between technical teams and business stakeholders, ensuring that projects meet both strategic goals and user needs.
-	\item Expert in Agile methodologies (SAFe, Scrum) with a proven track record of successful implementations.	       
-	\item Exceptional communication and presentation skills, with the ability to engage both technical and non-technical audiences.
-	\item Skilled in managing high-pressure situations with data and fact-driven decision-making.
+	\langen{\item Over 20 years of comprehensive experience in all stages of the Software Development Life Cycle: from conception to delivery.} 
+	\langpt{\item Mais de 20 anos de experiência em todas as etapas do Ciclo de Vida do Desenvolvimento de Software: da concepção à entrega.}
+	
+	\langen{\item Ability to bridge the gap between technical teams and business stakeholders, ensuring that projects meet both strategic goals and user needs.} 
+	\langpt{\item Capacidade de conectar equipes técnicas e stakeholders de negócios, garantindo que os projetos atendam tanto aos objetivos estratégicos quanto às necessidades dos usuários.}
+	
+	\langen{\item Expert in Agile methodologies (SAFe, Scrum) with a proven track record of successful implementations.} 
+	\langpt{\item Especialista em metodologias ágeis (SAFe, Scrum) com um histórico comprovado de implementações bem-sucedidas.}
+	
+	\langen{\item Exceptional communication and presentation skills, with the ability to engage both technical and non-technical audiences.} 
+	\langpt{\item Habilidades excepcionais de comunicação e apresentação, com a capacidade de engajar públicos técnicos e não técnicos.}
+	
+	\langen{\item Skilled in managing high-pressure situations with data and fact-driven decision-making.} 
+	\langpt{\item Habilidade em gerenciar situações de alta pressão com tomada de decisão baseada em dados e fatos.}
 \end{itemize}
 
 \medskip
 
-\cvsection{Experience}
+\cvsection{\langen{Experience}\langpt{Experiência}}
 
 %\cvevent{Product Owner}{Roche Diagnostics}{May 2011 -- Ongoing}{Barcelona, Spain}
 %\cvevent{Roche Diagnostics \href{https://www.roche.com/about/business/diagnostics.htm}{\small <http://www.roche.com>}\par}{Product Owner}{May 2015 -- Ongoing}{Barcelona, Spain}
 \cvevent{Roche Diagnostics}{Product Manager}{Nov 2022 -- Jan 2025}{Rotkreuz, Switzerland}
 \begin{itemize}
-	\item SW Product Manager for \textbf{Roche's first DNA-Sequencing instrument}.
-	\item Developed project plans, including the product roadmap, work breakdown structure, and overall software vision. 
-	\item Worked together with various stakeholders in order to define the right features for each of our milestones.
-	\item Recruited and formed the SW development teams.
+	\langen{\item SW Product Manager for \textbf{Roche's first DNA-Sequencing instrument}.} 
+	\langpt{\item SW Product Manager para \textbf{o primeiro instrumento de sequenciamento de DNA da Roche}.}
+	
+	\langen{\item Developed project plans, including the product roadmap, work breakdown structure, and overall software vision.} 
+	\langpt{\item Desenvolveu planos de projeto, incluindo o roadmap do produto, a estrutura de decomposição do trabalho e a visão geral do software.}
+	
+	\langen{\item Worked together with various stakeholders in order to define the right features for each of our milestones.} 
+	\langpt{\item Trabalhou em conjunto com diversos stakeholders para definir as funcionalidades adequadas para cada um de nossos marcos.}
+	
+	\langen{\item Recruited and formed the SW development teams.} 
+	\langpt{\item Recrutou e formou as equipes de desenvolvimento de software.}
 \end{itemize}
 
 
-\cvevent{}{Product Owner}{May 2015 -- Nov 2022}{Rotkreuz, Switzerland}
+\cvevent{}{Product Owner}{\langen{May}\langpt{Maio} 2015 -- Nov 2022}{Rotkreuz, Switzerland}
 \begin{itemize}
-	\item Led product development for the {\href{https://www.cobasliat.com/}{\textsuperscript{\textregistered}Cobas \textsuperscript{\textregistered}Liat}} point-of-care device, which was \textbf{pivotal during the COVID-19 pandemic}.
-	\item Defined and prioritized user stories for the SW development teams and coordinated acceptance testing with QA teams in a distributed setup (Spain and Switzerland).
-	\item Created detailed requirements and user interface sketches to guide development.
+	\langen{\item Led product development for the {\href{https://www.cobasliat.com/}{\textsuperscript{\textregistered}Cobas \textsuperscript{\textregistered}Liat}} point-of-care device, which was \textbf{pivotal during the COVID-19 pandemic}.}  
+	\langpt{\item Liderou o desenvolvimento do produto para o dispositivo point-of-care {\href{https://www.cobasliat.com/}{\textsuperscript{\textregistered}Cobas \textsuperscript{\textregistered}Liat}}, que foi \textbf{fundamental durante a pandemia de COVID-19}.}  
+	
+	\langen{\item Defined and prioritized user stories for the SW development teams and coordinated acceptance testing with QA teams in a distributed setup (Spain and Switzerland).}  
+	\langpt{\item Definiu e priorizou user stories para as equipes de desenvolvimento de software e coordenou os testes de aceitação com as equipes de QA em uma configuração distribuída (Espanha e Suíça).}  
+	
+	\langen{\item Created detailed requirements and user interface sketches to guide development.}  
+	\langpt{\item Criou requisitos detalhados e esboços de interface do usuário para orientar o desenvolvimento.}   
 \end{itemize}
 
-\cvevent{}{Scrum \& Build Master / Senior Software Developer}{May 2011 -- May 2015}{Barcelona, Spain}
+
+\cvevent{}{Scrum \& Build Master / \langen{Senior Software Developer}\langpt{Desenvolvedor de Software Sênior}}{\langen{May}\langpt{Maio} 2011 -- \langen{May}\langpt{Maio} 2015}{Barcelona, \langen{Spain}\langpt{Espanha}}
 \begin{itemize}
-	\item Led a local Scrum team and coordinated with international teams in Spain, India, and Switzerland to deliver a high-throughput PCR analyzer.
-	\item Developed a \textbf{comprehensive reporting and KPI analysis suite} using Microsoft Reporting/Integration Services, TFS, SQL, OLAP cubes, and PowerBI.
+	\langen{\item Led a local Scrum team and coordinated with international teams in Spain, India, and Switzerland to deliver a high-throughput PCR analyzer.}  
+	\langpt{\item Liderou uma equipe local de Scrum e coordenou com equipes internacionais na Espanha, Índia e Suíça para entregar um analisador de PCR de alto rendimento.}  
+	
+	\langen{\item Developed a \textbf{comprehensive reporting and KPI analysis suite} using Microsoft Reporting/Integration Services, TFS, SQL, OLAP cubes, and PowerBI.}  
+	\langpt{\item Desenvolveu um \textbf{conjunto abrangente de relatórios e análise de KPIs} usando Microsoft Reporting/Integration Services, TFS, SQL, cubos OLAP e PowerBI.}  
 \end{itemize}
 
 \divider
 
-\cvevent{Wolters Kluwer}{Software Architect}{Apr 2010 -- May 2011}{Barcelona, Spain}
+
+\cvevent{Wolters Kluwer}{\langen{Software Architect}\langpt{Arquiteto de Software}}{\langen{Apr}\langpt{Abril} 2010 -- \langen{May}\langpt{Maio} 2011}{Barcelona, \langen{Spain}\langpt{Espanha}}
 \begin{itemize}
-	\item Designed and developed a \textbf{C{\#}-based SW framework} for internal tax and accounting applications, enhancing operational efficiency.
+	\langen{\item Designed and developed a \textbf{C{\#}-based SW framework} for internal tax and accounting applications, enhancing operational efficiency.}  
+	\langpt{\item Projetou e desenvolveu um \textbf{framework de software baseado em C{\#}} para aplicações internas de contabilidade e tributação, aumentando a eficiência operacional.}  
 \end{itemize}
 
 \vfil \break
 
 % \divider
-\cvsection[page2sidebar]{Experience}
+\cvsection[page2sidebar]{\langen{Experience}\langpt{Experiência}}
 
-\cvevent{Amper}{Senior Software Developer}{Mar 2007 -- Feb 2010}{Barcelona, Spain}
+
+\cvevent{Amper}{\langen{Senior Software Developer}\langpt{Desenvolvedor de Software Sênior}}{\langen{Mar}\langpt{Março} 2007 -- Feb 2010}{Barcelona, \langen{Spain}\langpt{Espanha}}
 \begin{itemize}
-	\item Conducted \textbf{research and development} on embedded systems and comm protocols, driving innovation in the company’s product offerings.
-	\item Designed and developed .NET services and applications.
+	\langen{\item Conducted \textbf{research and development} on embedded systems and comm protocols, driving innovation in the company’s product offerings.}  
+	\langpt{\item Conduziu \textbf{pesquisa e desenvolvimento} em sistemas embarcados e protocolos de comunicação, impulsionando a inovação nos produtos da empresa.}  
+	
+	\langen{\item Designed and developed .NET services and applications.}  
+	\langpt{\item Projetou e desenvolveu serviços e aplicações .NET.}  
 \end{itemize}
 
 \divider
 
-\cvevent{Grupo 3C}{Software Developer}{Dec 2005 -- Jan 2007}{Barcelona, Spain}
+
+\cvevent{Grupo 3C}{\langen{Software Developer}\langpt{Desenvolvedor de Software}}{\langen{Dec}\langpt{Dez} 2005 -- Jan 2007}{Barcelona, \langen{Spain}\langpt{Espanha}}
 \begin{itemize}
-	\item Developed \textbf{web applications} using PHP, Perl, MySQL, HTML, CSS, and JavaScript, improving client service delivery.
+	\langen{\item Developed \textbf{web applications} using PHP, Perl, MySQL, HTML, CSS, and JavaScript, improving client service delivery.}  
+	\langpt{\item Desenvolveu \textbf{aplicações web} usando PHP, Perl, MySQL, HTML, CSS e JavaScript, melhorando a prestação de serviços aos clientes.}  
 \end{itemize}
 
 \divider
 
-\cvevent{iChameleon Group INC}{Full-stack Software Developer}{Aug 2004 -- Oct 2005}{(Freelancer - several locations)}
+
+\cvevent{iChameleon Group INC}{\langen{Full-stack Software Developer}\langpt{Desenvolvedor de Software "Full-stack"}}{\langen{Aug}\langpt{Ago} 2004 -- \langen{Oct}\langpt{Out} 2005}{(Freelancer - \langen{several locations}\langpt{paises diferentes})}
 \begin{itemize}
-	\item Designed and implemented SW for an \textbf{online music shop} as a full-stack developer, utilizing Perl, FastCGI, PostgreSQL, and Objective-C.
+	\langen{\item Designed and implemented SW for an \textbf{online music shop} as a full-stack developer, utilizing Perl, FastCGI, PostgreSQL, and Objective-C.}  
+	\langpt{\item Projetou e desenvolveu software para loja de música online usando Perl, FastCGI, PostgreSQL e Objective-C.}  
+	% Projetou e implementou software para uma \textbf{loja de música online} como desenvolvedor full-stack, utilizando Perl, FastCGI, PostgreSQL e Objective-C.
 \end{itemize}
 
 \divider
 
-\cvevent{Gaiax Co, LTD}{Software Developer Internship}{Aug 2003 -- Jul 2004}{Tokyo, Japan}
+
+\cvevent{Gaiax Co, LTD}{\langen{Software Developer Internship}\langpt{Estágio de Desenvolvedor de Software}}{\langen{Aug}\langpt{Ago} 2003 -- Jul 2004}{\langen{Tokyo, Japan}\langpt{Tóquio, Japão}}
 \begin{itemize}
-	\item Developed a Web game using Perl (mod perl and FastCGI). This was also \textbf{my university's thesis research project} on high loading \& demand technologies.
+	\langen{\item Developed a Web game using Perl (mod\_perl and FastCGI). This was also \textbf{my university's thesis research project} on high loading \& demand technologies.}  
+	\langpt{\item Desenvolveu um jogo web com Perl (mod\_perl e FastCGI), parte da sua tese sobre tecnologias de alta carga e demanda.}  
 \end{itemize}
 
 \divider
 
-\cvevent{Computing Laboratory, Sim\'{o}n Bol\'{i}var University}{IT \& Systems Administrator}{Oct 1999 -- Oct 2002}{Caracas, Venezuela}
+
+\cvevent{\langen{Computing Laboratory}\langpt{Laboratório de informática}, \langen{Simón Bolívar University}\langpt{Universidade Simón Bolívar}}{IT \& Systems Administrator}{\langen{Oct}\langpt{Out} 1999 -- \langen{Oct}\langpt{Out} 2002}{Caracas, Venezuela}
 \begin{itemize}
-	\item Managed and maintained parts of the \textbf{university’s LAN and lab servers} across Linux, Solaris, and Windows platforms, ensuring operational continuity and reliability.
-	\item Coordinated the admission of new members (exams, training, mentoring)
+	\langen{\item Managed and maintained parts of the \textbf{university’s LAN and lab servers} across Linux, Solaris, and Windows platforms, ensuring operational continuity and reliability.}  
+	\langpt{\item Gerenciou e manteve partes da \textbf{LAN e dos servidores de laboratório} da universidade em plataformas Linux, Solaris e Windows, garantindo continuidade operacional e confiabilidade.}  
+	
+	\langen{\item Coordinated the admission of new members (exams, training, mentoring).}  
+	\langpt{\item Coordenou a admissão de novos membros (exames, treinamento, mentoria).}  
 \end{itemize}
 
 \medskip
@@ -219,28 +268,72 @@
 % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
 % \wheelchart{outer radius}{inner radius}{
 % comma-separated list of value/text width/color/detail}
-\cvsection{Product management skills}
-\wheelchart{1.3cm}{0.4cm}{%
-	3/8em/Emphasis!90/Stakeholder management, 
-	2/8em/Emphasis!45/KPI analysis,
-	3/8em/Emphasis/Communication,
-	3/4em/Emphasis!75/Usability \& UX,
-	2/5em/Emphasis!30/\mbox{Requirements engineering},
-	2/10em/Emphasis!15/Data-driven decision making,
-	3/8em/Emphasis!60/Story mapping \& Roadmaps
-}
+\langen{\cvsection{Product management skills}}  
+\langpt{\cvsection{\large Habilidades em gestão de produtos}}
 
-\cvsection{Agile competencies}
-%\wheelchart{1.5cm}{0.5cm}{%
-\wheelchart{1.3cm}{0.4cm}{%
-	3/8em/Emphasis!90/Lean-Agile Leadership, 
-	2/8em/Emphasis!45/Expertise forming and managing Agile teams,
-	3/8em/Emphasis/DevOps and Release on Demand,
-	3/4em/Emphasis!75/\mbox{Business Solutions},
-	2/5em/Emphasis!30/\mbox{Lean Systems Engineering},
-	2/10em/Emphasis!15/People leader
-}
+\langen{\wheelchart{1.3cm}{0.4cm}{
+		3/8em/Emphasis!90/Stakeholder management,  
+		2/8em/Emphasis!45/KPI analysis,  
+		3/8em/Emphasis/Communication,  
+		3/4em/Emphasis!75/Usability \& UX,  
+		2/5em/Emphasis!30/\mbox{Requirements engineering},  
+		2/10em/Emphasis!15/Data-driven decision making,  
+		3/8em/Emphasis!60/Story mapping \& Roadmaps  
+}}  
+\langpt{\wheelchart{1.3cm}{0.4cm}{
+		3/8em/Emphasis!90/Gerenciamento de stakeholders,  
+		2/8em/Emphasis!45/Análise de KPIs,  
+		3/8em/Emphasis/Comunicação,  
+		3/4em/Emphasis!75/Usabilidade \& UX,  
+		2/5em/Emphasis!30/\mbox{Engenharia de requisitos},  
+		2/10em/Emphasis!15/Tomada de decisão baseada em dados,  
+		3/8em/Emphasis!60/Story mapping \& Roadmaps  
+}}  
 
+
+%\langen{\cvsection{Agile competencies}}  
+%\langpt{\cvsection{\large Competências "Agile"}}
+%
+%\langen{\wheelchart{1.3cm}{0.4cm}{
+%		3/8em/Emphasis!90/Lean-Agile Leadership,  
+%		2/8em/Emphasis!45/Expertise forming and managing Agile teams,  
+%		3/8em/Emphasis/DevOps and Release on Demand,  
+%		3/4em/Emphasis!75/\mbox{Business Solutions},  
+%		2/5em/Emphasis!30/\mbox{Lean Systems Engineering},  
+%		2/10em/Emphasis!15/People leader  
+%}}  
+%\langpt{\wheelchart{1.3cm}{0.4cm}{
+%		3/8em/Emphasis!90/Liderança Lean-Agile,  
+%		2/8em/Emphasis!45/Expertise na \mbox{formação e gestão} \mbox{de equipes "Agile"},  
+%		3/8em/Emphasis/DevOps e "Release on Demand",  
+%		3/4em/Emphasis!75/\mbox{Soluções de negócios},  
+%		2/5em/Emphasis!30/\mbox{Engenharia de} \mbox{"Sistemas Lean"},  
+%		2/10em/Emphasis!15/Liderança de pessoas  
+%}}  
+
+\langen{\cvsection{Technical Skills}}  
+\langpt{\cvsection{\large Habilidades técnicas}}
+
+\langen{\wheelchart{1.3cm}{0.4cm}{
+	3/8em/Emphasis!90/Software Architecture,  
+	2/8em/Emphasis!45/Linux expert,  
+	2/8em/Emphasis!15/Artificial Intelligence, 
+	2/8em/Emphasis/\mbox{C\# \& C++},  
+	2/4em/Emphasis!75/\mbox{Cloud computing},  
+	2/5em/Emphasis!30/\mbox{Containerization} \mbox{and Virtualization},  
+	2/10em/Emphasis!15/Scripting: \mbox{Bash \& Python},  
+	3/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
+ }}
+\langpt{\wheelchart{1.3cm}{0.4cm}{
+		3/8em/Emphasis!90/Arquitetura de software,  
+		2/8em/Emphasis!45/Especialista em Linux,  
+		2/8em/Emphasis!15/Inteligência artificial, 
+		2/8em/Emphasis/\mbox{C\# \& C++},  
+		2/4em/Emphasis!75/\mbox{Cloud computing},  
+		2/5em/Emphasis!30/\mbox{Containerization} \mbox{e Virtualization},  
+		2/10em/Emphasis!15/Scripting: \mbox{Bash \& Python},  
+		3/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
+}}
 %\cvsection{Programming skills}
 % \wheelchart{1.5cm}{0.5cm}{%
 % 	7/2em/Emphasis!80/C\#, 
