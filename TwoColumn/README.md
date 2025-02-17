@@ -4,9 +4,11 @@ I initially cloned this from some repo I found on the internet. The old README c
 
 ## Compile in Ubuntu 24.04
 
-1. Install these packages: **texstudio, texlive-fonts-extra, texlive-bibtex-extra, biber** 
-    - `sudo apt install texstudio texlive-fonts-extra texlive-bibtex-extra biber`
+1. Install these packages: **texstudio, texlive-fonts-extra, texlive-bibtex-extra, biber, texlive-lang-portuguese** 
+    - `sudo apt install texstudio texlive-fonts-extra texlive-bibtex-extra biber texlive-lang-portuguese`
     - Yes, these packages will require quite some space...
+    - If you don't want to support more languages (as I do with Portuguese, omit the `texlive-lang-portuguese` package)
+
 2. Open the file *main.tex* from this repo from the just installed *texstudio*
 3. In **Options -> Configure TeXStudio... -> Build**:
     - **Default Compiler**: Use *PdfLaTeX*
