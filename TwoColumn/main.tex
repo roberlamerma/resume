@@ -15,8 +15,8 @@
 %% Defining languages. Got this here: https://ptmartins.info/2021/05/15/cv.html
 \newif\ifen
 \newif\ifpt
-%\entrue % English enabled (either this line or the one below should be enabled, not both!)
-\pttrue % Portuguese enabled
+\entrue % English enabled (either this line or the one below should be enabled, not both!)
+%\pttrue % Portuguese enabled
 
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
@@ -44,6 +44,8 @@
 \usepackage[english,brazilian]{babel}
 \usepackage{csquotes} % recommended when using babel
 
+\usepackage{hyphenat}
+
 %language markup commands
 \newcommand{\langen}[1]{%
 	\ifen\selectlanguage{english}#1\fi}
@@ -69,7 +71,7 @@
 % If using xelatex or lualatex:
 % \setmainfont{Lato}
 
-% Change the colours if you want to
+% Change the colours
 \definecolor{Emphasis}{HTML}{4a4d9e}
 \definecolor{Accent}{HTML}{0f0f45}
 \definecolor{Body}{HTML}{555555}
@@ -108,18 +110,12 @@
 %  \mailaddress{Sonnhaldenstrasse 25}
 %  \location{Sonnhaldenstrasse 25, 6331 Hünenberg, Switzerland}
 %  \linkedin{linkedin.com/in/roberlamerma}
-
-
-  
-  
   
  \mbox{\linkedin{\href{https://www.linkedin.com/in/roberlamerma/}{roberlamerma}} \printinfo{\includesvg[width=0.09in]{readcv.svg}}{{\href{https://read.cv/roberlamerma}{Read.cv}}}}  
 
   % \github{github.com/roberlamerma}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
 %   \orcid{orcid.org/0000-0000-0000-0000}
-
-	
 
 }
 
@@ -202,7 +198,7 @@
 \cvevent{Wolters Kluwer}{\langen{Software Architect}\langpt{Arquiteto de Software}}{\langen{Apr}\langpt{Abril} 2010 -- \langen{May}\langpt{Maio} 2011}{Barcelona, \langen{Spain}\langpt{Espanha}}
 \begin{itemize}
 	\langen{\item Designed and developed a \textbf{C{\#}-based SW framework} for internal tax and accounting applications, enhancing operational efficiency.}  
-	\langpt{\item Projetou e desenvolveu um \textbf{framework de software baseado em C{\#}} para aplicações internas de contabilidade e tributação, aumentando a eficiência operacional.}  
+	\langpt{\item Design e desenvolveu um \textbf{framework de software baseado em C{\#}} para aplicações internas de contabilidade e tributação, aumentando a eficiência operacional.}  
 \end{itemize}
 
 \vfil \break
@@ -217,7 +213,7 @@
 	\langpt{\item Conduziu \textbf{pesquisa e desenvolvimento} em sistemas embarcados e protocolos de comunicação, impulsionando a inovação nos produtos da empresa.}  
 	
 	\langen{\item Designed and developed .NET services and applications.}  
-	\langpt{\item Projetou e desenvolveu serviços e aplicações .NET.}  
+	\langpt{\item Design e desenvolveu serviços e aplicações .NET.}  
 \end{itemize}
 
 \divider
@@ -235,7 +231,7 @@
 \cvevent{iChameleon Group INC}{\langen{Full-stack Software Developer}\langpt{Desenvolvedor de Software "Full-stack"}}{\langen{Aug}\langpt{Ago} 2004 -- \langen{Oct}\langpt{Out} 2005}{(Freelancer - \langen{several locations}\langpt{paises diferentes})}
 \begin{itemize}
 	\langen{\item Designed and implemented SW for an \textbf{online music shop} as a full-stack developer, utilizing Perl, FastCGI, PostgreSQL, and Objective-C.}  
-	\langpt{\item Projetou e desenvolveu software para loja de música online usando Perl, FastCGI, PostgreSQL e Objective-C.}  
+	\langpt{\item Design e desenvolveu software para loja de música online usando Perl, FastCGI, PostgreSQL e Objective-C.}  
 	% Projetou e implementou software para uma \textbf{loja de música online} como desenvolvedor full-stack, utilizando Perl, FastCGI, PostgreSQL e Objective-C.
 \end{itemize}
 
@@ -315,24 +311,24 @@
 \langpt{\cvsection{\large Habilidades técnicas}}
 
 \langen{\wheelchart{1.3cm}{0.4cm}{
-	3/8em/Emphasis!90/Software Architecture,  
-	2/8em/Emphasis!45/Linux expert,  
+	2/8em/Emphasis!90/Software Architecture,  
+	3/8em/Emphasis!45/Linux expert,  
 	2/8em/Emphasis!15/Artificial Intelligence, 
-	2/8em/Emphasis/\mbox{C\# \& C++},  
+	3/8em/Emphasis/\mbox{C\# \& C++},  
 	2/4em/Emphasis!75/\mbox{Cloud computing},  
 	2/5em/Emphasis!30/\mbox{Containerization} \mbox{and Virtualization},  
 	2/10em/Emphasis!15/Scripting: \mbox{Bash \& Python},  
-	3/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
+	2/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
  }}
 \langpt{\wheelchart{1.3cm}{0.4cm}{
-		3/8em/Emphasis!90/Arquitetura de software,  
-		2/8em/Emphasis!45/Especialista em Linux,  
+		2/8em/Emphasis!90/Arquitetura de software,  
+		3/8em/Emphasis!45/Especialista em Linux,  
 		2/8em/Emphasis!15/Inteligência artificial, 
-		2/8em/Emphasis/\mbox{C\# \& C++},  
-		2/4em/Emphasis!75/\mbox{Cloud computing},  
+		3/8em/Emphasis/\mbox{C\# \& C++},  
+		2/4em/Emphasis!75/\mbox{Computação em nuvem},  
 		2/5em/Emphasis!30/\mbox{Containerization} \mbox{e Virtualization},  
-		2/10em/Emphasis!15/Scripting: \mbox{Bash \& Python},  
-		3/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
+		2/10em/Emphasis!15/\mbox{Bash \& Python},  
+		2/8em/Emphasis!60/Embedded \mbox{Linux (ARM)}
 }}
 %\cvsection{Programming skills}
 % \wheelchart{1.5cm}{0.5cm}{%

@@ -1,6 +1,6 @@
 # My Resume
 
-I initially cloned this from some repo I found on the internet. The old README contents are on the section "# Old README" below
+I initially cloned this from some repo I found on the internet. The old README contents are on the section `# Old README` below
 
 ## Compile in Ubuntu 24.04
 
@@ -14,6 +14,18 @@ I initially cloned this from some repo I found on the internet. The old README c
     - **Default Compiler**: Use *PdfLaTeX*
     - **Commands**: Add the option "-shell-escape" to **PdfLaTeX**. My complete options look like this: `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode %.tex` 
 4. Compile it! (F6)
+
+## Switch languages
+This CV is written in 2 languages: English and Portuguese. In order to select a language, make sure that just one of the `\[TWO_LETTER_LANG_CODE]true` variables is uncommented. This is how you would configure English (this is at the beginning of the file '_main.tex_'):
+
+```
+\newif\ifen
+\newif\ifpt
+\entrue 
+%\pttrue 
+```
+
+You could do this switching more elegantly, for example with a Makefile. Instructions here: [https://ptmartins.info/2021/05/15/cv.html](https://ptmartins.info/2021/05/15/cv.html)
 
 # Old Readme
 
