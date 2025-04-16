@@ -6,3 +6,6 @@
 *.bcf
 *.run.xml
 TwoColumn/svg-inkscape/
+TwoColumn/main.bbl
+TwoColumn/main.blg
+TwoColumn/main.dvi
